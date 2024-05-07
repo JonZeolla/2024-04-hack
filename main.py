@@ -8,6 +8,7 @@ import os
 import subprocess
 from langchain_community.chat_models import ChatOllama
 from langchain_core.prompts import PromptTemplate
+from guard_duty import get_findings
 
 
 def main():
@@ -17,6 +18,8 @@ def main():
     except subprocess.CalledProcessError:
         print("Ollama is not running. Starting it...")
         subprocess.Popen(["ollama", "serve"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    get_findings()
 
     protocol = "http"
     fqdn = "localhost"
@@ -30,9 +33,9 @@ def main():
     prompt = PromptTemplate.from_template(template)
 
     # langchain_ollama = ChatOllama(model=model, base_url=host)
-    chain = prompt | llm
-    response = chain.invoke({})
-    print(response)
+    #chain = prompt | llm
+    #response = chain.invoke({})
+    #print(response)
 
 
 if __name__ == "__main__":
