@@ -1,0 +1,191 @@
+time=2024-05-07T12:29:32.104-04:00 level=INFO source=images.go:817 msg="total blobs: 13"
+time=2024-05-07T12:29:32.106-04:00 level=INFO source=images.go:824 msg="total unused blobs removed: 0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/pull                 --> github.com/ollama/ollama/server.PullModelHandler (5 handlers)
+[GIN-debug] POST   /api/generate             --> github.com/ollama/ollama/server.GenerateHandler (5 handlers)
+[GIN-debug] POST   /api/chat                 --> github.com/ollama/ollama/server.ChatHandler (5 handlers)
+[GIN-debug] POST   /api/embeddings           --> github.com/ollama/ollama/server.EmbeddingsHandler (5 handlers)
+[GIN-debug] POST   /api/create               --> github.com/ollama/ollama/server.CreateModelHandler (5 handlers)
+[GIN-debug] POST   /api/push                 --> github.com/ollama/ollama/server.PushModelHandler (5 handlers)
+[GIN-debug] POST   /api/copy                 --> github.com/ollama/ollama/server.CopyModelHandler (5 handlers)
+[GIN-debug] DELETE /api/delete               --> github.com/ollama/ollama/server.DeleteModelHandler (5 handlers)
+[GIN-debug] POST   /api/show                 --> github.com/ollama/ollama/server.ShowModelHandler (5 handlers)
+[GIN-debug] POST   /api/blobs/:digest        --> github.com/ollama/ollama/server.CreateBlobHandler (5 handlers)
+[GIN-debug] HEAD   /api/blobs/:digest        --> github.com/ollama/ollama/server.HeadBlobHandler (5 handlers)
+[GIN-debug] POST   /v1/chat/completions      --> github.com/ollama/ollama/server.ChatHandler (6 handlers)
+[GIN-debug] GET    /                         --> github.com/ollama/ollama/server.(*Server).GenerateRoutes.func1 (5 handlers)
+[GIN-debug] GET    /api/tags                 --> github.com/ollama/ollama/server.ListModelsHandler (5 handlers)
+[GIN-debug] GET    /api/version              --> github.com/ollama/ollama/server.(*Server).GenerateRoutes.func2 (5 handlers)
+[GIN-debug] HEAD   /                         --> github.com/ollama/ollama/server.(*Server).GenerateRoutes.func1 (5 handlers)
+[GIN-debug] HEAD   /api/tags                 --> github.com/ollama/ollama/server.ListModelsHandler (5 handlers)
+[GIN-debug] HEAD   /api/version              --> github.com/ollama/ollama/server.(*Server).GenerateRoutes.func2 (5 handlers)
+time=2024-05-07T12:29:32.107-04:00 level=INFO source=routes.go:1143 msg="Listening on 127.0.0.1:11434 (version 0.1.32)"
+time=2024-05-07T12:29:32.108-04:00 level=INFO source=payload.go:28 msg="extracting embedded files" dir=/var/folders/7x/83hwcqmj4pnd0qwq_wqdr94w0000gn/T/ollama2011226101/runners
+time=2024-05-07T12:29:32.126-04:00 level=INFO source=payload.go:41 msg="Dynamic LLM libraries [metal]"
+time=2024-05-07T12:57:07.466-04:00 level=INFO source=server.go:127 msg="offload to gpu" reallayers=33 layers=33 required="4765.5 MiB" used="4765.5 MiB" available="73728.0 MiB" kv="1024.0 MiB" fulloffload="164.0 MiB" partialoffload="193.0 MiB"
+time=2024-05-07T12:57:07.466-04:00 level=INFO source=server.go:264 msg="starting llama server" cmd="/var/folders/7x/83hwcqmj4pnd0qwq_wqdr94w0000gn/T/ollama2011226101/runners/metal/ollama_llama_server --model /Users/jonzeolla/.ollama/models/blobs/sha256-8934d96d3f08982e95922b2b7a2c626a1fe873d7c3b06e8e56d7bc0a1fef9246 --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --port 50650"
+time=2024-05-07T12:57:07.468-04:00 level=INFO source=server.go:389 msg="waiting for llama runner to start responding"
+{"function":"server_params_parse","level":"INFO","line":2603,"msg":"logging to file is disabled.","tid":"0x1f1da7ac0","timestamp":1715101027}
+{"build":2679,"commit":"7593639","function":"main","level":"INFO","line":2820,"msg":"build info","tid":"0x1f1da7ac0","timestamp":1715101027}
+{"function":"main","level":"INFO","line":2827,"msg":"system info","n_threads":10,"n_threads_batch":-1,"system_info":"AVX = 0 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 1 | ARM_FMA = 1 | F16C = 0 | FP16_VA = 1 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | MATMUL_INT8 = 0 | ","tid":"0x1f1da7ac0","timestamp":1715101027,"total_threads":14}
+llama_model_loader: loaded meta data with 23 key-value pairs and 291 tensors from /Users/jonzeolla/.ollama/models/blobs/sha256-8934d96d3f08982e95922b2b7a2c626a1fe873d7c3b06e8e56d7bc0a1fef9246 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 11008
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 32
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,61249]   = ["▁ t", "e r", "i n", "▁ a", "e n...
+llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  19:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  20:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  21:                    tokenizer.chat_template str              = {% if messages[0]['role'] == 'system'...
+llama_model_loader: - kv  22:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_0:  225 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 32
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 4096
+llm_load_print_meta: n_embd_v_gqa     = 4096
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 11008
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 6.74 B
+llm_load_print_meta: model size       = 3.56 GiB (4.54 BPW) 
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.22 MiB
+ggml_backend_metal_buffer_from_ptr: allocated buffer, size =  3577.58 MiB, ( 3577.66 / 73728.00)
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =    70.31 MiB
+llm_load_tensors:      Metal buffer size =  3577.57 MiB
+..................................................................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: n_batch    = 512
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M3 Max
+ggml_metal_init: picking default device: Apple M3 Max
+ggml_metal_init: using embedded metal library
+ggml_metal_init: GPU name:   Apple M3 Max
+ggml_metal_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_init: GPU family: MTLGPUFamilyMetal3  (5001)
+ggml_metal_init: simdgroup reduction support   = true
+ggml_metal_init: simdgroup matrix mul. support = true
+ggml_metal_init: hasUnifiedMemory              = true
+ggml_metal_init: recommendedMaxWorkingSetSize  = 77309.41 MB
+ggml_backend_metal_buffer_type_alloc_buffer: allocated buffer, size =  1024.00 MiB, ( 4607.53 / 73728.00)
+llama_kv_cache_init:      Metal KV buffer size =  1024.00 MiB
+llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_new_context_with_model:        CPU  output buffer size =     0.14 MiB
+ggml_backend_metal_buffer_type_alloc_buffer: allocated buffer, size =   164.02 MiB, ( 4771.55 / 73728.00)
+llama_new_context_with_model:      Metal compute buffer size =   164.00 MiB
+llama_new_context_with_model:        CPU compute buffer size =    12.01 MiB
+llama_new_context_with_model: graph nodes  = 1030
+llama_new_context_with_model: graph splits = 2
+{"function":"initialize","level":"INFO","line":448,"msg":"initializing slots","n_slots":1,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"initialize","level":"INFO","line":460,"msg":"new slot","n_ctx_slot":2048,"slot_id":0,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"main","level":"INFO","line":3064,"msg":"model loaded","tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"main","hostname":"127.0.0.1","level":"INFO","line":3267,"msg":"HTTP server listening","n_threads_http":"13","port":"50650","tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"update_slots","level":"INFO","line":1578,"msg":"all slots are idle and system prompt is empty, clear the KV cache","tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":0,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":1,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50654,"status":200,"tid":"0x16b7a3000","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":2,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50655,"status":200,"tid":"0x16b82f000","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":3,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50656,"status":200,"tid":"0x16b8bb000","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":4,"tid":"0x1f1da7ac0","timestamp":1715101032}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50657,"status":200,"tid":"0x16b947000","timestamp":1715101032}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50653,"status":200,"tid":"0x16b717000","timestamp":1715101032}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":5,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50682,"status":200,"tid":"0x16b9d3000","timestamp":1715101033}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":6,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50682,"status":200,"tid":"0x16b9d3000","timestamp":1715101033}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"POST","msg":"request","params":{},"path":"/tokenize","remote_addr":"127.0.0.1","remote_port":50682,"status":200,"tid":"0x16b9d3000","timestamp":1715101033}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":7,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50682,"status":200,"tid":"0x16b9d3000","timestamp":1715101033}
+{"function":"launch_slot_with_data","level":"INFO","line":833,"msg":"slot is processing task","slot_id":0,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"update_slots","ga_i":0,"level":"INFO","line":1816,"msg":"slot progression","n_past":0,"n_past_se":0,"n_prompt_tokens_processed":29,"slot_id":0,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"update_slots","level":"INFO","line":1840,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101033}
+{"function":"print_timings","level":"INFO","line":276,"msg":"prompt eval time     =      91.17 ms /    29 tokens (    3.14 ms per token,   318.09 tokens per second)","n_prompt_tokens_processed":29,"n_tokens_second":318.09406809406806,"slot_id":0,"t_prompt_processing":91.168,"t_token":3.143724137931035,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101038}
+{"function":"print_timings","level":"INFO","line":290,"msg":"generation eval time =    5312.55 ms /   278 runs   (   19.11 ms per token,    52.33 tokens per second)","n_decoded":278,"n_tokens_second":52.32889955712434,"slot_id":0,"t_token":19.10989928057554,"t_token_generation":5312.552,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101038}
+{"function":"print_timings","level":"INFO","line":299,"msg":"          total time =    5403.72 ms","slot_id":0,"t_prompt_processing":91.168,"t_token_generation":5312.552,"t_total":5403.719999999999,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101038}
+{"function":"update_slots","level":"INFO","line":1648,"msg":"slot released","n_cache_tokens":307,"n_ctx":2048,"n_past":306,"n_system_tokens":0,"slot_id":0,"task_id":8,"tid":"0x1f1da7ac0","timestamp":1715101038,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"POST","msg":"request","params":{},"path":"/completion","remote_addr":"127.0.0.1","remote_port":50682,"status":200,"tid":"0x16b9d3000","timestamp":1715101038}
+[GIN] 2024/05/07 - 12:57:18 | 200 | 11.150702416s |       127.0.0.1 | POST     "/api/chat"
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":289,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50703,"status":200,"tid":"0x16baeb000","timestamp":1715101052}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":290,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50703,"status":200,"tid":"0x16baeb000","timestamp":1715101052}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"POST","msg":"request","params":{},"path":"/tokenize","remote_addr":"127.0.0.1","remote_port":50703,"status":200,"tid":"0x16baeb000","timestamp":1715101052}
+{"function":"process_single_task","level":"INFO","line":1510,"msg":"slot data","n_idle_slots":1,"n_processing_slots":0,"task_id":291,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"GET","msg":"request","params":{},"path":"/health","remote_addr":"127.0.0.1","remote_port":50703,"status":200,"tid":"0x16baeb000","timestamp":1715101052}
+{"function":"launch_slot_with_data","level":"INFO","line":833,"msg":"slot is processing task","slot_id":0,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"update_slots","ga_i":0,"level":"INFO","line":1816,"msg":"slot progression","n_past":29,"n_past_se":0,"n_prompt_tokens_processed":0,"slot_id":0,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"update_slots","level":"INFO","line":1827,"msg":"we have to evaluate at least 1 token to generate logits","slot_id":0,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"update_slots","level":"INFO","line":1840,"msg":"kv cache rm [p0, end)","p0":28,"slot_id":0,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101052}
+{"function":"print_timings","level":"INFO","line":276,"msg":"prompt eval time     =      99.72 ms /     0 tokens (     inf ms per token,     0.00 tokens per second)","n_prompt_tokens_processed":0,"n_tokens_second":0.0,"slot_id":0,"t_prompt_processing":99.724,"t_token":null,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101064}
+{"function":"print_timings","level":"INFO","line":290,"msg":"generation eval time =   12305.25 ms /   629 runs   (   19.56 ms per token,    51.12 tokens per second)","n_decoded":629,"n_tokens_second":51.11640587141404,"slot_id":0,"t_token":19.563190779014306,"t_token_generation":12305.247,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101064}
+{"function":"print_timings","level":"INFO","line":299,"msg":"          total time =   12404.97 ms","slot_id":0,"t_prompt_processing":99.724,"t_token_generation":12305.247,"t_total":12404.971,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101064}
+{"function":"update_slots","level":"INFO","line":1648,"msg":"slot released","n_cache_tokens":658,"n_ctx":2048,"n_past":657,"n_system_tokens":0,"slot_id":0,"task_id":292,"tid":"0x1f1da7ac0","timestamp":1715101064,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2741,"method":"POST","msg":"request","params":{},"path":"/completion","remote_addr":"127.0.0.1","remote_port":50703,"status":200,"tid":"0x16baeb000","timestamp":1715101064}
+[GIN] 2024/05/07 - 12:57:44 | 200 | 12.406749875s |       127.0.0.1 | POST     "/api/chat"
