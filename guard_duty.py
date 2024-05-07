@@ -29,4 +29,5 @@ def get_findings():
         FindingIds=gd_findings["FindingIds"]
     )
 
-    print(json.dumps(response,default=str))
+    json_response = json.dumps(response,default=str)
+    return json_response

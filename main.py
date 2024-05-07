@@ -10,6 +10,14 @@ from langchain_community.chat_models import ChatOllama
 from langchain_core.prompts import PromptTemplate
 from guard_duty import get_findings
 
+def ask_another_prompt():
+    print("Do you want to ask another prompt? y/n")
+    ask_prmpt = input()
+    return ask_prmpt
+
+def get_another_prompt():
+    another_prompt = input()    
+    return another_prompt
 
 def main():
     try:
@@ -19,7 +27,7 @@ def main():
         print("Ollama is not running. Starting it...")
         subprocess.Popen(["ollama", "serve"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    get_findings()
+    json_findings = get_findings()
 
     protocol = "http"
     fqdn = "localhost"
@@ -28,10 +36,14 @@ def main():
     host = f"{protocol}://{fqdn}:{port}"
     model = "llama2:7b"
     llm = ChatOllama(base_url=host, model=model)
-
-    template = "Tell me something interesting about the Roman Empire"
-    prompt = PromptTemplate.from_template(template)
-
+    ask_prompt = True 
+    while ask_prompt:
+        prompt = get_another_prompt()
+        template = f'Here is my json data {json_findings} and {prompt}'
+        prompt = PromptTemplate.from_template(template)
+        another_prmpt = ask_another_prompt()
+        if another_prmpt.lower() in ["y","yes"]:
+            ask_prompt = False
     # langchain_ollama = ChatOllama(model=model, base_url=host)
     #chain = prompt | llm
     #response = chain.invoke({})
