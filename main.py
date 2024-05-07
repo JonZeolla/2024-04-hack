@@ -4,11 +4,20 @@ Ollama running llama2:7b to start; future is move to bedrock
 connect to AWS with boto3 and pull data to feed to the llama2 prompts
 """
 
+import os
+import subprocess
 from langchain_community.chat_models import ChatOllama
 from langchain_core.prompts import PromptTemplate
 
 
 def main():
+    try:
+        output = subprocess.check_output(["pgrep", "-f", "ollama"])
+        print("Ollama is already running!")
+    except subprocess.CalledProcessError:
+        print("Ollama is not running. Starting it...")
+        subprocess.Popen(["ollama", "serve"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
     protocol = "http"
     fqdn = "localhost"
     port = 11434
